@@ -56,18 +56,29 @@ and are gitignored. The proof controls only its own Chrome subprocess.
 
 ## Scope and release boundaries
 
-This is an entirely local **functional prototype**, not a hosted beta, published
-App Store app, registered trademark, connected billing service, paid product,
-or verified customer/retention experiment. The temporary server can stop.
+This is a **public experimental static website** and separate local Mac build,
+not a published App Store app, verified brand, connected billing service,
+paid product, or verified customer/retention experiment. The local server can stop.
 No private source archive, Noriel memory, Mac Keychain, or personal data is
 required. All cases are invented fiction and may need a manual editorial
 solvability review beyond schema tests before consumer release.
 
-To host later: approve a specific verified static deployment, replace local-only
-share links with the hosted origin, add a privacy page and original-content
-review, verify the brand name and platform terms, test browser CSP and refresh,
-and invite people only with their consent. No public user submissions are needed
-for the first playtest.
+## Public experiment (not customer production)
+
+The static game is reachable at:
+https://paradox-casefile-lab-20261111.vercel.app/
+
+Vercel marked the initial deployment as **production** and assigned public
+aliases despite the original preview request. Treat it as public immediately;
+it is an unmonetized Hobby-plan prototype and contains only original fictional
+game content. Its HTTPS content and security headers were tested after deploy.
+No user accounts, payment systems, external model calls or personal-data forms
+have been activated.
+
+For a commercial release: confirm trademark/domain rights, review platform
+terms and Hobby-plan eligibility, obtain opt-in player evidence, verify content
+editorially, and establish permitted payment/privacy policies before enabling
+monetization. Do not infer traffic or demand from the operator's browser tests.
 
 See `OPPORTUNITY_LEDGER.md` for primary market signals, contrary evidence
 and honest validation gates.

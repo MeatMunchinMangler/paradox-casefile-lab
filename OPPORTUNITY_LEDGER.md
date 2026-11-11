@@ -51,7 +51,7 @@ domain or App Store availability. Do not make commercial name exclusivity claims
 | Playable local browser prototype | YES |
 | Original authored cases | 12 |
 | Python / Node / actual Chrome acceptance | See tests and final receipt |
-| Public preview URL | NOT DEPLOYED |
+| Public experimental HTTPS URL | LIVE: https://paradox-casefile-lab-20261111.vercel.app/ |
 | Consenting external test players | 0 verified |
 | Organic share opens | UNKNOWN, no analytics |
 | Return players 24–48h | UNKNOWN |
@@ -85,14 +85,16 @@ upfront subscriptions or paid acquisition before player evidence.
 ## Ownership, safety and continuity
 
 - Project source: isolated repo in owner's Documents/Moonshot App Lab.
-- No GitHub push, hosted domain, money, external messaging, or unrelated
-  modifications happened during the initial build.
+- No GitHub push, spending, third-party messaging, or unrelated projects
+  were changed. A public Vercel Hobby static experiment now serves original
+  fictional content with security headers. It has a production alias, not
+  a private preview.
 - No personal chat archive, consumer identity, account connector, nor
   third-party model calls are needed for gameplay.
 - The Moonshot App Lab automation can revisit this evidence and compare it
   to other opportunities. It should not spend 20 cycles polishing a game
   without any observed player demand.
-- Product status labels: `LOCAL_PLAYABLE`, `HOSTED_PREVIEW_PENDING`,
+- Product status labels: `LOCAL_PLAYABLE`, `HOSTED_PUBLIC_EXPERIMENT`,
   `DEMAND_UNVALIDATED`, `REVENUE_ZERO`.
 
 Recognition -> integrate evidence -> build -> observe actual use ->
