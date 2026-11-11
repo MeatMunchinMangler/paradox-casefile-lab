@@ -242,6 +242,12 @@ dialog::backdrop { background: #020509d9; backdrop-filter: blur(8px); }
  .how-steps { grid-template-columns: 1fr; }
  .how-steps > div { min-height: 0; }
 }
+/* Prevent the sticky verdict dock from covering the first clue on narrow
+   touch screens. At 390px, the first clue's center was at y=746 while the
+   dock occupied y=731..837, making real pointer taps hit the dock instead. */
+@media (max-width: 800px) {
+ .verdict-dock { position: static; }
+}
 @media (prefers-reduced-motion: reduce) {
  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
