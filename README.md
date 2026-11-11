@@ -1,5 +1,13 @@
 # PARADOX — Find what cannot be true.
 
+**[Play PARADOX free in your browser](https://paradox-casefile-lab-20261111.vercel.app/)** · [Optional playtest feedback](https://moonshot-launch-deck-20261111.vercel.app/playtest.html?app=paradox)
+
+Try one bite-size mystery: read six evidence cards and find the two claims that cannot both be true. Twelve original fictional cases are playable on desktop or mobile. No sign-in is needed to play; progress stays in that browser.
+
+**Your feedback is optional.** The playtest page does not send responses automatically. After creating a response, you can copy it or choose to open a **public GitHub issue** yourself. GitHub sign-in is required for issues, and your issue/account name will be public. Please do not include personal or confidential details.
+
+**Experiment status:** Live and free, not yet a paid product. Independent playtester counts, retention, willingness to pay, and revenue have **not been verified**.
+
 A new playable **consumer micro-mystery experiment** built on November 11, 2026.
 This is not Noriel Lead Desk or an AI wrapper. It is a deliberately small,
 original, mobile-first game built to test whether people enjoy and *share*
@@ -34,9 +42,8 @@ python3 -B server.py --port 0
 ```
 
 The server binds **only to 127.0.0.1**. A local URL is not reachable from
-another person's phone; an actual public challenge link requires a separately
-approved, reviewed host/deployment. Do not send localhost challenge URLs
-to potential players as if they are public.
+another person's phone. For real players, share the reviewed public URL at the
+top of this README instead of a localhost link.
 
 ## Independent tests
 
