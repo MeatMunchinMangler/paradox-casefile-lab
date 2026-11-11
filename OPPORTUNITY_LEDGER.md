@@ -99,3 +99,11 @@ upfront subscriptions or paid acquisition before player evidence.
 
 Recognition -> integrate evidence -> build -> observe actual use ->
 correct -> expand only with deserved demand. Joy is law.
+
+## 2026-11-11 01:xx PST — deployment and comparative market update (v0.2)
+
+Existing isolated PARADOX prototype and six Node tests rechecked: 6/6 passed. Published source to a NEW public repository https://github.com/MeatMunchinMangler/paradox-casefile-lab, main initially at 1d3c5fe. GitHub Pages configured at https://meatmunchinmangler.github.io/paradox-casefile-lab/. At first check Pages was `building` and HTTP 404, therefore **not yet verified live**; verify 200 and actual gameplay before claiming deployed. Existing local README had unrelated uncommitted edits; not included in pushed main.
+
+Broader category comparison on this run: virtual body-doubling Focusmate lists $8/mo annual or $12 monthly (https://www.focusmate.com/pricing/); freelancer invoice reminder ClientChaser advertises £5.99/mo launch Pro (https://www.clientchaser.com/); Shopify returns StoreReturn advertises $29/mo Growth (https://storereturn.app/); creator receivables Krevlo advertises a creator/talent-management-specific workflow (https://krevlo.com/). These are **published prices/claims, not independently verified sales or growth**. All categories have paying offers, but each also faces incumbents, integrations, and/or acquisition costs. PARADOX remains a low-cost consumer repeat-play experiment rather than a proven strongest business; do not infer paid demand from these competitors.
+
+Next gate: wait for Pages build; perform live browser smoke, then seek consented playtests and measure second-case completion and voluntary shares. No outreach, checkout, revenue, or buyer validation yet. No paid spend.
