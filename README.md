@@ -99,3 +99,7 @@ summarize fictional cases as scientific truth, or auto-deploy without review.
 
 **Joy is law** means people should feel wonder and play, not be forced into
 an algorithmic dependency. The game works completely without an AI model.
+
+## November 11 optional voluntary playtest referral — local release candidate
+
+PARADOX now has an opt-in feedback link in the result dialog and footer, targeting the reviewed Moonshot Lab playtest URL with app=paradox. See FEEDBACK_LINK_RELEASE_NOTE.md. Nothing sends score, progress, identity or a message automatically. A separate Moonshot Lab commit must deploy the allowlisted preselection feature in coordination. Not yet on the public site; demand and revenue remain unverified.
