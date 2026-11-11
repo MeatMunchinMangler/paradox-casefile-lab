@@ -1,0 +1,578 @@
+[
+  {
+    "id": "the-last-lift",
+    "title": "The Last Lift",
+    "difficulty": "rookie",
+    "hook": "One elevator. One impossible ride.",
+    "scene": "The St. Vale Hotel, 9:45 PM. A guest disappeared from the eleventh floor while the lobby cameras went dark.",
+    "clues": [
+      {
+        "id": "A",
+        "tag": "MAINTENANCE",
+        "text": "The hotel's only elevator was mechanically locked against all movement from 9:00 to 10:00 PM."
+      },
+      {
+        "id": "B",
+        "tag": "WITNESS",
+        "text": "A guest checked into room 1104 at 8:47 PM."
+      },
+      {
+        "id": "C",
+        "tag": "CAMERA",
+        "text": "The lobby camera stopped recording at 9:18 PM."
+      },
+      {
+        "id": "D",
+        "tag": "FOUND",
+        "text": "A silver suitcase was located on the eleventh-floor landing."
+      },
+      {
+        "id": "E",
+        "tag": "MOTOR LOG",
+        "text": "The elevator's authenticated motor log records a completed trip to floor eleven at 9:32 PM."
+      },
+      {
+        "id": "F",
+        "tag": "STAFF",
+        "text": "The night porter clocked in at 9:40 PM."
+      }
+    ],
+    "answer": [
+      "A",
+      "E"
+    ],
+    "why": "The only elevator cannot be mechanically locked against all movement for the entire hour and also complete a verified trip during that same hour.",
+    "hints": [
+      "The contradiction involves motion, not the missing guest.",
+      "Compare the building maintenance report with the motor's own log."
+    ]
+  },
+  {
+    "id": "dead-air",
+    "title": "Dead Air",
+    "difficulty": "rookie",
+    "hook": "Someone heard a voice that couldn't travel.",
+    "scene": "North Harbor Radio Station, 12:40 PM. A caller insists the missing host's voice was broadcast live after noon.",
+    "clues": [
+      {
+        "id": "A",
+        "tag": "CALENDAR",
+        "text": "The host's public interview was scheduled for 12:30 PM."
+      },
+      {
+        "id": "B",
+        "tag": "POWER",
+        "text": "The station's only transmitter had no power or backup from noon until 1:00 PM."
+      },
+      {
+        "id": "C",
+        "tag": "STAFF",
+        "text": "The producer arrived at the studio at 11:55 AM."
+      },
+      {
+        "id": "D",
+        "tag": "OBJECT",
+        "text": "A red notebook remained beside the microphone."
+      },
+      {
+        "id": "E",
+        "tag": "NOTE",
+        "text": "The control-room door was unlocked at 12:10 PM."
+      },
+      {
+        "id": "F",
+        "tag": "SIGNAL",
+        "text": "The transmission archive confirms a live broadcast through that transmitter at 12:22 PM."
+      }
+    ],
+    "answer": [
+      "B",
+      "F"
+    ],
+    "why": "The station's only transmitter cannot be unpowered with no backup and simultaneously broadcast a live signal through that same transmitter.",
+    "hints": [
+      "Follow the signal path.",
+      "One statement says the only transmitter was off; another says it transmitted."
+    ]
+  },
+  {
+    "id": "five-vials",
+    "title": "Five Vials",
+    "difficulty": "rookie",
+    "hook": "The same moment. Two impossible counts.",
+    "scene": "A research laboratory's specimen cabinet was photographed before anyone entered the room.",
+    "clues": [
+      {
+        "id": "A",
+        "tag": "SHIFT",
+        "text": "The morning lab team left at 8:00 AM."
+      },
+      {
+        "id": "B",
+        "tag": "SEAL",
+        "text": "The cabinet was sealed and unchanged throughout the 9:15 AM inspection."
+      },
+      {
+        "id": "C",
+        "tag": "COUNT 1",
+        "text": "A verified image shows exactly four vials in the sealed cabinet at 9:15 AM."
+      },
+      {
+        "id": "D",
+        "tag": "COUNT 2",
+        "text": "A simultaneous verified image shows exactly five vials in that same sealed cabinet at 9:15 AM."
+      },
+      {
+        "id": "E",
+        "tag": "LABEL",
+        "text": "The cabinet's only label reads C-19."
+      },
+      {
+        "id": "F",
+        "tag": "VISITOR",
+        "text": "A new technician received a key after the inspection."
+      }
+    ],
+    "answer": [
+      "C",
+      "D"
+    ],
+    "why": "Two accurate, simultaneous inventories of the same unchanged sealed cabinet cannot report both exactly four and exactly five vials.",
+    "hints": [
+      "Ignore the time of day; focus on quantity.",
+      "Both counts refer to the exact same cabinet at the exact same instant."
+    ]
+  },
+  {
+    "id": "train-seven",
+    "title": "Train Seven",
+    "difficulty": "rookie",
+    "hook": "A departure after the last departure.",
+    "scene": "A sleepy station, a vanished ticket, and a platform that should have gone quiet.",
+    "clues": [
+      {
+        "id": "A",
+        "tag": "TIMETABLE",
+        "text": "The exception-free operating record says the final train of the day departed this station at 11:10 PM."
+      },
+      {
+        "id": "B",
+        "tag": "TICKET",
+        "text": "A passenger bought a one-way ticket at 10:49 PM."
+      },
+      {
+        "id": "C",
+        "tag": "WEATHER",
+        "text": "Fog covered the east platform after 11:00 PM."
+      },
+      {
+        "id": "D",
+        "tag": "PLATFORM",
+        "text": "The same operating record verifies a train departed this station at 11:37 PM that day."
+      },
+      {
+        "id": "E",
+        "tag": "PORTER",
+        "text": "A porter collected a green umbrella in the waiting room."
+      },
+      {
+        "id": "F",
+        "tag": "GATE",
+        "text": "Platform gate three was closed for repairs."
+      }
+    ],
+    "answer": [
+      "A",
+      "D"
+    ],
+    "why": "The station's published, exception-free departure log cannot identify 11:10 PM as the day's final train and also verify another departure from the station at 11:37 PM.",
+    "hints": [
+      "Look at the word 'last'.",
+      "The station's own timeline contradicts itself."
+    ]
+  },
+  {
+    "id": "bridge-closed",
+    "title": "The Vanished Bridge",
+    "difficulty": "agent",
+    "hook": "The chase ended somewhere that no longer existed.",
+    "scene": "A river town has only one crossing. Witnesses disagree about what they saw before dawn.",
+    "clues": [
+      {
+        "id": "A",
+        "tag": "MAP",
+        "text": "The town has one bridge and no ferry crossing."
+      },
+      {
+        "id": "B",
+        "tag": "ROADWORKS",
+        "text": "The bridge roadway was entirely removed before 4:00 AM and not replaced until after sunrise."
+      },
+      {
+        "id": "C",
+        "tag": "WITNESS",
+        "text": "A delivery van parked near the river at 3:58 AM."
+      },
+      {
+        "id": "D",
+        "tag": "WEATHER",
+        "text": "There was no fog at the river."
+      },
+      {
+        "id": "E",
+        "tag": "CAMERA",
+        "text": "Authenticated continuous footage shows a sedan driving across that bridge at 4:25 AM."
+      },
+      {
+        "id": "F",
+        "tag": "PHONE",
+        "text": "A call was placed from the south bank at 4:31 AM."
+      }
+    ],
+    "answer": [
+      "B",
+      "E"
+    ],
+    "why": "A vehicle cannot drive across the town's only bridge at 4:25 AM when that bridge's roadway had been completely removed before the hour began.",
+    "hints": [
+      "A roadway is the deciding detail.",
+      "Compare the roadworks record with the authenticated crossing footage."
+    ]
+  },
+  {
+    "id": "ninth-guest",
+    "title": "The Ninth Guest",
+    "difficulty": "agent",
+    "hook": "Eight seats. Nine people. No room for ambiguity.",
+    "scene": "A dinner's final headcount is sealed in two independent reports.",
+    "clues": [
+      {
+        "id": "A",
+        "tag": "SEATING",
+        "text": "At 8:30 PM, each of the room's exactly eight available seats held one different guest, with no shared seats."
+      },
+      {
+        "id": "B",
+        "tag": "HOST",
+        "text": "Dinner was served at 8:15 PM."
+      },
+      {
+        "id": "C",
+        "tag": "MENU",
+        "text": "The only main course was mushroom risotto."
+      },
+      {
+        "id": "D",
+        "tag": "MUSIC",
+        "text": "A violinist performed in the adjoining hallway."
+      },
+      {
+        "id": "E",
+        "tag": "PHOTO",
+        "text": "A silver tray appears in a photograph of the room."
+      },
+      {
+        "id": "F",
+        "tag": "HEADCOUNT",
+        "text": "At precisely 8:30 PM, nine different guests were each seated in those same eight seats, with nobody standing."
+      }
+    ],
+    "answer": [
+      "A",
+      "F"
+    ],
+    "why": "If exactly eight seats each contain one different guest, and all nine different guests are seated only in those seats at the same instant, both reports cannot be true.",
+    "hints": [
+      "This is a capacity contradiction.",
+      "Count the people, then count the seats they're each said to occupy."
+    ]
+  },
+  {
+    "id": "dry-storm",
+    "title": "The Dry Storm",
+    "difficulty": "agent",
+    "hook": "A cloudless report with a soaking-wet secret.",
+    "scene": "The museum courtyard was under continuous weather surveillance.",
+    "clues": [
+      {
+        "id": "A",
+        "tag": "COURT",
+        "text": "The courtyard's glass roof had been removed in the summer."
+      },
+      {
+        "id": "B",
+        "tag": "GAUGE A",
+        "text": "The verified courtyard weather log recorded zero rainfall from 3:00 to 4:00 PM."
+      },
+      {
+        "id": "C",
+        "tag": "WITNESS",
+        "text": "A guard carried an umbrella at 3:20 PM."
+      },
+      {
+        "id": "D",
+        "tag": "GAUGE B",
+        "text": "An equally verified courtyard gauge recorded measurable rainfall there at 3:31 PM."
+      },
+      {
+        "id": "E",
+        "tag": "PLANTS",
+        "text": "The courtyard had a watering hose."
+      },
+      {
+        "id": "F",
+        "tag": "SCHEDULE",
+        "text": "The museum closed at 5:00 PM."
+      }
+    ],
+    "answer": [
+      "B",
+      "D"
+    ],
+    "why": "The same accurately measured courtyard cannot have zero rainfall during the entire hour and measurable rainfall occurring there at 3:31 PM within that hour.",
+    "hints": [
+      "Both instruments are described as accurate.",
+      "Compare the total rainfall record with the minute-level reading."
+    ]
+  },
+  {
+    "id": "key-seven",
+    "title": "Key Seven",
+    "difficulty": "agent",
+    "hook": "No duplicates. No exceptions. One impossible entry.",
+    "scene": "A private archive's electronic access system kept a record of every accepted key.",
+    "clues": [
+      {
+        "id": "A",
+        "tag": "BUILDING",
+        "text": "The archive occupies one floor."
+      },
+      {
+        "id": "B",
+        "tag": "CUSTODIAN",
+        "text": "The night custodian clocked in at 5:42 PM."
+      },
+      {
+        "id": "C",
+        "tag": "SYSTEM",
+        "text": "Key seven was permanently disabled at exactly 6:00 PM and could not be reactivated or bypassed."
+      },
+      {
+        "id": "D",
+        "tag": "CAMERA",
+        "text": "The west hallway camera faced the loading dock."
+      },
+      {
+        "id": "E",
+        "tag": "ACCESS",
+        "text": "The verified access controller accepted key seven as authorized at 6:13 PM."
+      },
+      {
+        "id": "F",
+        "tag": "CASE",
+        "text": "A sealed folder was found beside the front desk."
+      }
+    ],
+    "answer": [
+      "C",
+      "E"
+    ],
+    "why": "If key seven was permanently and completely disabled at 6:00 PM with no reactivation possible, a verified successful authorization by that same key at 6:13 PM cannot occur.",
+    "hints": [
+      "Trace the credential, not the visitor.",
+      "One record concerns key seven's permanent disablement; the other its later successful use."
+    ]
+  },
+  {
+    "id": "clocktower",
+    "title": "The Clocktower",
+    "difficulty": "detective",
+    "hook": "Everyone heard the bell. Nobody touched its power.",
+    "scene": "The city square's great clock has one chime system and no backup mechanism.",
+    "clues": [
+      {
+        "id": "A",
+        "tag": "TOWER",
+        "text": "The clocktower rises above the west side of the square."
+      },
+      {
+        "id": "B",
+        "tag": "TAG",
+        "text": "The only bell mechanism was physically disconnected and incapable of sounding from 6:00 to 7:00 PM."
+      },
+      {
+        "id": "C",
+        "tag": "CROWD",
+        "text": "A parade passed the square at 6:18 PM."
+      },
+      {
+        "id": "D",
+        "tag": "WITNESS",
+        "text": "The watchmaker stayed inside the workshop."
+      },
+      {
+        "id": "E",
+        "tag": "SENSOR",
+        "text": "A calibrated sensor confirms the tower's bell mechanism itself struck at 6:30 PM."
+      },
+      {
+        "id": "F",
+        "tag": "WINDOW",
+        "text": "Two tower windows were open until dusk."
+      }
+    ],
+    "answer": [
+      "B",
+      "E"
+    ],
+    "why": "The only chime mechanism cannot be physically disconnected and unable to sound from 6:00 to 7:00 PM yet produce its confirmed bell strike at 6:30 PM.",
+    "hints": [
+      "Separate what people remember from what the mechanism did.",
+      "The maintenance tag and the sound sensor refer to the same mechanism."
+    ]
+  },
+  {
+    "id": "sealed-letter",
+    "title": "The Sealed Letter",
+    "difficulty": "detective",
+    "hook": "A confession supposedly emerged from an envelope nobody opened.",
+    "scene": "A sealed courier envelope and two equally precise chain-of-custody records.",
+    "clues": [
+      {
+        "id": "A",
+        "tag": "SEAL",
+        "text": "The only envelope opening was protected by a tamper-proof seal that stayed intact from 10:00 to 11:00 AM; contents could not pass through the intact envelope."
+      },
+      {
+        "id": "B",
+        "tag": "COURIER",
+        "text": "The courier reached the courthouse at 10:42 AM."
+      },
+      {
+        "id": "C",
+        "tag": "WITNESS",
+        "text": "The receptionist wore a gray badge."
+      },
+      {
+        "id": "D",
+        "tag": "STAMP",
+        "text": "The envelope had a blue postage stamp."
+      },
+      {
+        "id": "E",
+        "tag": "DESK",
+        "text": "The envelope rested on a wooden desk until collection."
+      },
+      {
+        "id": "F",
+        "tag": "EXTRACTION",
+        "text": "A verified custody record says the original letter was physically removed from that same envelope at 10:30 AM."
+      }
+    ],
+    "answer": [
+      "A",
+      "F"
+    ],
+    "why": "A message cannot be physically removed from a tamper-proof envelope that remained sealed and intact throughout the same interval, if opening is the only way to remove it.",
+    "hints": [
+      "The seal's physical properties matter.",
+      "One record says extraction was physically impossible; the other confirms it happened."
+    ]
+  },
+  {
+    "id": "blackout-frame",
+    "title": "Frame 211",
+    "difficulty": "detective",
+    "hook": "Someone filmed a room in complete darkness—but the secret isn't the dark.",
+    "scene": "Investigators found an apparently flawless internal recording during a building-wide outage.",
+    "clues": [
+      {
+        "id": "A",
+        "tag": "HALL",
+        "text": "The north hallway leads to a locked archive."
+      },
+      {
+        "id": "B",
+        "tag": "CALENDAR",
+        "text": "The fire drill was booked for the following day."
+      },
+      {
+        "id": "C",
+        "tag": "POWER",
+        "text": "Camera C-12's only energy supply was physically disconnected from 2:00 to 3:00 AM; it had no battery or backup."
+      },
+      {
+        "id": "D",
+        "tag": "VIDEO",
+        "text": "The authenticated internal memory of camera C-12 shows a newly captured live frame at 2:26 AM."
+      },
+      {
+        "id": "E",
+        "tag": "OBJECT",
+        "text": "A silver pen was found under a chair."
+      },
+      {
+        "id": "F",
+        "tag": "CHECK",
+        "text": "The camera lens was cleaned at 1:30 AM."
+      }
+    ],
+    "answer": [
+      "C",
+      "D"
+    ],
+    "why": "A security camera with no battery or alternative energy source cannot run during the exact period its sole mains supply was physically disconnected and record a live internal frame.",
+    "hints": [
+      "Cameras can see in the dark; powering one is different.",
+      "Look for a contradiction about available electricity."
+    ]
+  },
+  {
+    "id": "double-measure",
+    "title": "The Double Measure",
+    "difficulty": "detective",
+    "hook": "The evidence disagrees with itself to the gram.",
+    "scene": "A museum weighs a sealed artifact before the auction, using one calibrated scale.",
+    "clues": [
+      {
+        "id": "A",
+        "tag": "AUCTION",
+        "text": "The museum's auction opened at noon."
+      },
+      {
+        "id": "B",
+        "tag": "SCALE 1",
+        "text": "At 11:00:00 AM, the exact mass of the sealed unchanged artifact on the calibrated scale was 4.000 kg."
+      },
+      {
+        "id": "C",
+        "tag": "GUARD",
+        "text": "A guard signed the visitor book."
+      },
+      {
+        "id": "D",
+        "tag": "CASE",
+        "text": "The artifact's display case was polished on Friday."
+      },
+      {
+        "id": "E",
+        "tag": "SCALE 2",
+        "text": "At the same instant, on that same calibrated scale under identical conditions, the exact mass of the artifact was 6.000 kg."
+      },
+      {
+        "id": "F",
+        "tag": "LABEL",
+        "text": "The auction catalog listed the artifact as item seven."
+      }
+    ],
+    "answer": [
+      "B",
+      "E"
+    ],
+    "why": "The same sealed, unchanged artifact cannot simultaneously have an exact mass of 4.000 kg and 6.000 kg on one calibrated scale under identical conditions.",
+    "hints": [
+      "Don't be distracted by the auction.",
+      "Focus on simultaneous measurements of the same unchanged object."
+    ]
+  }
+]

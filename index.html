@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#101119">
+  <meta name="description" content="Twelve short, cinematic mysteries. Every case hides a contradiction. Find the impossible pair and challenge your friends.">
+  <title>PARADOX — Find what cannot be true.</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" type="module"></script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Paradox home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span></span>
+        <span class="brand-name">PARADOX<span class="brand-dot">.</span></span>
+      </a>
+      <div class="header-right">
+        <span class="edition-chip"><span class="status-orbit" aria-hidden="true"></span> ORIGINAL CASEFILES / VOL. 01</span>
+        <button class="text-button" id="how-button" type="button"><span aria-hidden="true">?</span> HOW TO PLAY</button>
+      </div>
+    </header>
+    <main class="main-layout">
+      <aside class="archive-rail" aria-label="Case selection">
+        <div class="eyebrow rail-top">YOUR DESK <span>001—012</span></div>
+        <div class="rail-message">
+          <span class="mini-orbit" aria-hidden="true"></span>
+          <span>TRUTH IS<br>IN THE DETAILS.</span>
+        </div>
+        <button class="daily-card" id="daily-button" type="button">
+          <span class="daily-small">THE DAILY ANOMALY <span aria-hidden="true">↗</span></span>
+          <strong>One case.<br> Every day.</strong>
+          <span class="daily-note" id="daily-note">A new daily challenge is ready.</span>
+        </button>
+        <div class="archive-title-row">
+          <h2>CASE ARCHIVE</h2>
+          <span id="archive-count">00 / 12</span>
+        </div>
+        <div class="case-list" id="case-list" aria-label="Select a case"></div>
+        <div class="rail-footer">
+          <span class="subtle-line" aria-hidden="true"></span>
+          <p>NO ACCOUNTS. NO TRACKERS.<br>JUST YOU AGAINST THE EVIDENCE.</p>
+        </div>
+      </aside>
+
+      <section class="case-stage" aria-labelledby="case-title">
+        <div class="case-utility">
+          <span class="case-reference" id="case-reference">CASEFILE / 001</span>
+          <span class="case-category" id="case-category">◉ ROOKIE / LOGIC</span>
+        </div>
+        <div class="headline-wrap">
+          <div class="headline-top">FIND THE IMPOSSIBLE PAIR</div>
+          <h1 id="case-title">Every truth leaves<br>something behind<span>.</span></h1>
+          <p id="case-hook" class="case-hook">Two pieces of evidence cannot both be true. Find them.</p>
+        </div>
+        <div class="scene-card">
+          <div class="scene-icon" aria-hidden="true">⌁</div>
+          <div class="scene-content">
+            <span class="eyebrow">THE SCENE</span>
+            <p id="case-scene">The file is opening.</p>
+          </div>
+          <span class="scene-decoration" aria-hidden="true">001<br>CASE<br>LOG</span>
+        </div>
+        <div class="evidence-header">
+          <div>
+            <span class="eyebrow">EVIDENCE ON RECORD</span>
+            <h2>Select <em>two</em> that cannot coexist.</h2>
+          </div>
+          <span id="evidence-count" class="evidence-count">06 DOCUMENTS</span>
+        </div>
+        <div class="clue-grid" id="clue-grid" aria-label="Evidence cards"></div>
+        <div class="verdict-dock">
+          <div class="dock-label">
+            <span class="signal-dot" aria-hidden="true"></span>
+            <span id="dock-status" role="status" aria-live="polite">Select two evidence cards to begin.</span>
+          </div>
+          <div class="dock-actions">
+            <button id="clear-button" class="ghost-button" type="button" disabled>CLEAR</button>
+            <button id="submit-button" class="primary-button" type="button" disabled>LOCK VERDICT <span aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+        <div class="stage-footnote">
+          <span>12 ORIGINAL MYSTERIES</span>
+          <span>FIND THE DETAIL. CHANGE THE STORY.</span>
+        </div>
+      </section>
+
+      <aside class="analysis-rail" aria-label="Your investigation">
+        <div class="analysis-top"><span class="eyebrow">YOUR INVESTIGATION</span><span class="analysis-live">● LIVE</span></div>
+        <div class="investigation-card">
+          <div class="lens-graphic" aria-hidden="true"><span class="lens-ring a"></span><span class="lens-ring b"></span><span class="lens-centre">×</span></div>
+          <div class="eyebrow">YOUR THEORY</div>
+          <h2>Two truths.<br><em>One fracture.</em></h2>
+          <div class="selection-slot" id="selection-one"><span>01</span><strong>NOT SELECTED</strong></div>
+          <div class="pair-connector" aria-hidden="true">×</div>
+          <div class="selection-slot" id="selection-two"><span>02</span><strong>NOT SELECTED</strong></div>
+          <p class="analysis-caption">Tap two statements that logically cannot both hold under the case's stated conditions.</p>
+        </div>
+        <div class="assist-card">
+          <div class="assist-head"><span class="eyebrow">NEED A NUDGE?</span><span id="hints-left">02 LEFT</span></div>
+          <p id="hint-copy" aria-live="polite">A good detective knows when to look twice.</p>
+          <button class="hint-button" id="hint-button" type="button">REVEAL A HINT <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="score-grid">
+          <div><span class="eyebrow">CASES CLOSED</span><strong id="solved-number">00</strong></div>
+          <div><span class="eyebrow">CURRENT STREAK</span><strong id="streak-number">00</strong></div>
+        </div>
+        <div class="analysis-bottom">YOUR PROGRESS STAYS ON THIS DEVICE. <button id="reset-button" type="button">RESET</button></div>
+      </aside>
+    </main>
+    <footer class="site-footer"><span>PARADOX / THE MYSTERY IS IN THE DETAILS.</span><span>MADE FOR THE MOMENT YOU SAY: WAIT, THAT'S IMPOSSIBLE.</span><span>© 2026 PARADOX LAB / EXPERIMENT 01 · <a href="privacy.html">PRIVACY</a></span></footer>
+  </div>
+  <dialog class="result-dialog" id="result-dialog" aria-labelledby="result-heading">
+    <div class="dialog-decor" aria-hidden="true">×</div>
+    <div class="result-content">
+      <span class="eyebrow" id="result-kicker">CASE CLOSED</span>
+      <h2 id="result-heading">You saw through it.</h2>
+      <p id="result-message">The details never agreed.</p>
+      <div class="result-stats" id="result-stats"></div>
+      <div class="result-explanation"><span class="eyebrow">THE IMPOSSIBLE DETAIL</span><p id="result-why"></p></div>
+      <div class="result-actions">
+        <button id="share-button" class="primary-button" type="button">SHARE CHALLENGE <span aria-hidden="true">↗</span></button>
+        <button id="next-button" class="ghost-button" type="button">NEXT CASE →</button>
+      </div>
+      <span id="share-status" role="status" aria-live="polite" class="share-status"></span>
+    </div>
+    <form method="dialog"><button class="dialog-close" type="submit" aria-label="Close result">×</button></form>
+  </dialog>
+  <dialog class="how-dialog" id="how-dialog" aria-labelledby="how-heading">
+    <form method="dialog"><button class="dialog-close" type="submit" aria-label="Close instructions">×</button></form>
+    <div class="how-content">
+      <span class="eyebrow">FIELD GUIDE / 001</span>
+      <h2 id="how-heading">The facts don't lie.<br><em>Someone got them wrong.</em></h2>
+      <p>Every case contains one impossible pair. Read the scene, examine the evidence, and select exactly two cards that cannot both be true.</p>
+      <div class="how-steps"><div><strong>01</strong><span>READ</span><p>Find the exact conditions.</p></div><div><strong>02</strong><span>CONNECT</span><p>Choose the two conflicting statements.</p></div><div><strong>03</strong><span>REVEAL</span><p>Lock your verdict to expose the contradiction.</p></div></div>
+      <p class="how-warning">Cases are original logic fiction. No AI-generated facts, ads, personal accounts, or online ranking. Daily and archive scores live only in your browser.</p>
+      <button id="how-start" type="button" class="primary-button">OPEN MY CASEFILE <span aria-hidden="true">↗</span></button>
+    </div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
