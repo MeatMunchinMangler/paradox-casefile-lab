@@ -99,3 +99,25 @@ summarize fictional cases as scientific truth, or auto-deploy without review.
 
 **Joy is law** means people should feel wonder and play, not be forced into
 an algorithmic dependency. The game works completely without an AI model.
+
+## November 11 optional voluntary playtest referral — local release candidate
+
+PARADOX now has an opt-in feedback link in the result dialog and footer, targeting the reviewed Moonshot Lab playtest URL with app=paradox. See FEEDBACK_LINK_RELEASE_NOTE.md. Nothing sends score, progress, identity or a message automatically. A separate Moonshot Lab commit must deploy the allowlisted preselection feature in coordination. Not yet on the public site; demand and revenue remain unverified.
+
+
+## First-session entry and clean sharing (November 11)
+
+The public root opens Case 1, The Last Lift (rookie), when a browser has no
+solved case or daily-streak history. Returning players still open the rotating
+daily challenge. An explicit daily=1 query always opens the daily case and any
+valid case=ID link always opens that named case even for a new visitor.
+This is an onboarding hypothesis, not demonstrated retention or buyer demand.
+
+Challenge links contain only a requested case ID and discard arbitrary
+incoming query parameters and fragments to avoid propagation of unwanted
+tracking codes or token-like text. Progress remains browser-local; no network
+analytics, backend, payment service or outreach was added.
+
+To test, run node --test tests/*.mjs and the real Chrome
+tools/entry-smoke.cjs proof. For production always use the existing cooperative
+release guard (production-release-guard-20261111/README.md).

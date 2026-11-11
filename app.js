@@ -63,7 +63,45 @@ const el = id => document.getElementById(id);
 const pad = n => String(n).padStart(2, "0");
 function currentCase() { return state.cases[state.index]; }
 function utcToday() { return new Date().toISOString().slice(0, 10); }
-function cleanUrl() { return new URL(window.location.href); }
+// Strip unrelated query parameters and fragments when generating a link or
+// switching cases. Someone else's inbound tracking query is not ours to share.
+function cleanUrl() { return new URL(window.location.pathname, window.location.origin); }
+
+// A first-time visitor should not land straight in a detective-level daily
+// puzzle; return visitors can continue their normal daily rotation. Explicit
+// direct-case links ALWAYS win, even if a visitor has no local progress.
+export function initialCaseSelection(cases, search = "", saved = {}, timestamp = Date.now()) {
+  if (!Array.isArray(cases) || cases.length === 0 ||
+      cases.some(c => !c || typeof c.id !== "string")) {
+    throw new TypeError("A valid nonempty case archive is required");
+  }
+  const params = new URLSearchParams(search);
+  const chosen = cases.findIndex(c => c.id === params.get("case"));
+  if (chosen >= 0) return { index: chosen, mode: "archive" };
+  const daily = dailyIndexAt(timestamp, cases.length);
+  if (params.get("daily") === "1") return { index: daily, mode: "daily" };
+  const solved = saved && typeof saved === "object" && !Array.isArray(saved)
+    ? saved.solved : null;
+  const hasSolved = solved && typeof solved === "object" &&
+    !Array.isArray(solved) && cases.some(c => solved[c.id]?.solved === true);
+  const hasDaily = Array.isArray(saved?.dailyDays) &&
+    saved.dailyDays.some(day => typeof day === "string" &&
+      /^\d{4}-\d{2}-\d{2}$/.test(day));
+  return hasSolved || hasDaily
+    ? { index: daily, mode: "daily" }
+    : { index: 0, mode: "archive" };
+}
+
+export function publicCaseLink(id, currentHref) {
+  if (typeof id !== "string" || !/^[a-z0-9-]{4,42}$/.test(id))
+    throw new TypeError("Invalid case ID");
+  const current = new URL(currentHref);
+  if (!["https:", "http:"].includes(current.protocol))
+    throw new TypeError("Unsupported shared-link protocol");
+  const link = new URL(current.pathname, current.origin);
+  link.searchParams.set("case", id);
+  return link.toString();
+}
 
 function toast(message) {
   const target = el("toast");
@@ -81,11 +119,7 @@ function element(tag, className = "", text = "") {
 }
 
 function safeCaseLink(id) {
-  const u = cleanUrl();
-  u.searchParams.delete("daily");
-  u.searchParams.set("case", id);
-  u.hash = "";
-  return u.toString();
+  return publicCaseLink(id, window.location.href);
 }
 
 function renderArchive() {
@@ -297,10 +331,8 @@ async function initialize() {
     el("case-scene").textContent = "Launch with: python3 server.py --port 0";
     return;
   }
-  const u = new URL(window.location.href);
-  const id = u.searchParams.get("case");
-  const index = id ? state.cases.findIndex(x => x.id === id) : dailyIndexAt(Date.now(), state.cases.length);
-  chooseCase(index >= 0 ? index : dailyIndexAt(Date.now(), state.cases.length), id && index >= 0 ? "archive" : "daily", false);
+  const entry = initialCaseSelection(state.cases, window.location.search, progress);
+  chooseCase(entry.index, entry.mode, false);
   el("daily-button").addEventListener("click", () => chooseCase(dailyIndexAt(Date.now(), state.cases.length), "daily"));
   el("submit-button").addEventListener("click", lockVerdict);
   el("clear-button").addEventListener("click", () => { state.selected = []; updateSelection(); });
