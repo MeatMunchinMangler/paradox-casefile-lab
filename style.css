@@ -152,6 +152,10 @@ dialog::backdrop { background: #020509d9; backdrop-filter: blur(8px); }
 .result-actions button { flex: 1 1 auto; }
 .dialog-close { position: absolute; top: 12px; right: 16px; width: 36px; height: 36px; background: none; border: 1px solid #5b5962; color: var(--pale); font-size: 24px; }
 .share-status { display: block; min-height: 14px; margin-top: 13px; color: var(--mint); font-size: 9px; line-height: 1.5; }
+.voluntary-feedback { border-top: 1px solid #ffffff24; margin-top: 22px; padding-top: 17px; }
+.voluntary-feedback a { color: var(--mint); font-size: 11px; font-weight: 800; letter-spacing: .07em; text-decoration: underline; text-underline-offset: 4px; }
+.voluntary-feedback a:focus-visible { outline: 2px solid var(--mint); outline-offset: 5px; }
+.voluntary-feedback p { color: var(--muted); font-size: 11px; line-height: 1.5; margin: 9px 0 0; }
 .how-dialog { width: 630px; }
 .how-content h2 em { color: var(--orange); }
 .how-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin: 25px 0; }
