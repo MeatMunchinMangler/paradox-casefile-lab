@@ -1,0 +1,37 @@
+name: Review-only PARADOX itch HTML5 export
+on:
+  pull_request:
+    paths:
+      - 'tools/itch_export.py'
+      - 'tests/test_itch_export.py'
+      - '.github/workflows/itch-export-review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Offline exporter tests
+        run: python3 -m unittest discover -s tests -p 'test_itch_export.py' -v
+      - name: Verify pinned game files and build itch HTML5 archive
+        run: |
+          python3 tools/itch_export.py --source-dir . --out PARADOX-HTML5-e4645647.zip | tee export-receipt.json
+          python3 - PARADOX-HTML5-e4645647.zip <<'PY'
+          import sys, zipfile
+          with zipfile.ZipFile(sys.argv[1]) as z:
+              assert len(z.namelist()) == 7 and 'index.html' in z.namelist()
+              assert z.testzip() is None
+              print('ZIP structure verified:', ', '.join(z.namelist()))
+          PY
+      - name: Preserve reviewed archive for manual itch upload only
+        uses: actions/upload-artifact@v4
+        with:
+          name: PARADOX-HTML5-e4645647-review-only
+          path: |
+            PARADOX-HTML5-e4645647.zip
+            export-receipt.json
+          if-no-files-found: error
+          retention-days: 7
