@@ -4,6 +4,7 @@ on:
     paths:
       - 'tools/itch_export.py'
       - 'tests/test_itch_export.py'
+      - 'tests/itch_http_browser.py'
       - '.github/workflows/itch-export-review.yml'
   workflow_dispatch:
 permissions:
@@ -26,12 +27,18 @@ jobs:
               assert z.testzip() is None
               print('ZIP structure verified:', ', '.join(z.namelist()))
           PY
-      - name: Preserve reviewed archive for manual itch upload only
+      - name: Actual Chrome test over localhost HTTP with embedded iframe
+        run: |
+          CHROME="$(command -v google-chrome || command -v chromium || true)"
+          test -n "$CHROME"
+          python3 tests/itch_http_browser.py --source-dir . --chrome "$CHROME" | tee http-iframe-receipt.json
+      - name: Preserve reviewed archive and test receipts for manual itch upload
         uses: actions/upload-artifact@v4
         with:
           name: PARADOX-HTML5-e4645647-review-only
           path: |
             PARADOX-HTML5-e4645647.zip
             export-receipt.json
+            http-iframe-receipt.json
           if-no-files-found: error
           retention-days: 7
